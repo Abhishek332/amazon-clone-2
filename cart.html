@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.1.0/dist/jdenticon.min.js" async
+        integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/"
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="bg-white w-full">
+        <div class="header bg-gray-900 h-16 flex items-center">
+            <div class="logo w-1/5 h-16 ml-10">
+                <img class="w-28 h-16 object-contain" src="https://www.pinclipart.com/picdir/big/57-576184_
+                view-our-amazon-storefront-amazon
+                -logo-white-png.png" alt="">
+            </div>
+
+            <input class="h-9 w-32 bg-gray-800 border border-gray-500
+            border-opacity-75 rounded-l-xl px-3 text-white ml-6
+            placeholder-white focus:outline-none"
+            id="search" type="text" placeholder="Search...">
+
+            <div class="categories h-9 w-30 bg-gray-800
+            border border-gray-500 border-opacity-75 px-3
+            text-white flex items-center">
+                Categories
+                <!-- SVG icon from heroicons.com -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+            <div class="search-icon bg-yellow-500 h-9 w-10
+            rounded-r-xl flex justify-center items-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+            </div>
+
+            <!-- ------------ Right Icons ------------- -->
+            <div class="icons text-white flex 
+            items-center justify-around ml-auto mr-8 w-48 h-16">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <div class="card-icon h-10 w-10 bg-yellow-500 flex justify-center items-center rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="h-4 w-4 text-gray-600" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <svg class="h-12 w-12 rounded"
+                data-jdenticon-value="Abhishek"></svg>
+            </div>
+        </div>
+
+        <div class="main h-screen flex">
+            <div class="main-sidebar w-1/5 bg-gray-900
+            border-t-2 border-gray-700 p-6">
+                <div class="sidebar-categories">
+                    <div class="sidebar-main-category text-yellow-500
+                    cursor-pointer flex font-bold rounded-lg p-2 mb-3 bg-gray-700">
+                        <span class="w-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </span>
+                        <span>Categories</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2">
+                    <span class="w-8"></span>    
+                    <span>Echo and Alexa</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2">
+                    <span class="w-8"></span>    
+                    <span>Kindle</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2">
+                    <span class="w-8"></span>    
+                    <span>Books</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2">
+                    <span class="w-8"></span>    
+                    <span>Electronics</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2">
+                    <span class="w-8"></span>    
+                    <span>Home and Garden</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2">
+                    <span class="w-8"></span>    
+                    <span>Fashion</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-xl">
+                    <span class="w-8">
+                        <i class="fas fa-percent"></i>
+                    </span>    
+                    <span>Sell On Amazon</span>
+                    </div>
+                    <div class="sidebar-main-category text-white
+                    cursor-pointer flex font-bold p-2 hover:bg-gray-700
+                    rounded-xl mb-4">
+                    <span class="w-8">
+                        <i class="far fa-question-circle"></i>
+                    </span>    
+                    <span>Help</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main-section w-full p-6 bg-white-100">
+                <h1 class="text-gray-400 text-3xl font-bold mb-6">
+                    Shopping Cart
+                </h1>
+                <div class="table-titles flex font-bold text-gray-400">
+                    <h2 class="flex-grow">Product</h2>
+                    <h2 class="w-48">Count</h2>
+                    <h2 class="w-48">Total Cost</h2>
+                    <span ></span>
+                </div>
+                <div class="cart-items">
+                    <div class="cart-item mt-5 flex items-center pb-4">
+                        <div class="cart-item-image w-40 h-24 bg-white p-4 rounded-lg">
+                            <img class="w-full h-full object-contain" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExIVFRUXFRUVFxUXFRUXGBcVFxUYFhUXFxUYHSggGBolHRUYITEhJSorLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGy0lHx8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAL8BCAMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABLEAACAQIDAgoFBwoEBQUAAAABAgMAEQQSIQUxBhMiQVFhcYGRsQcycqGyFDRCc5LB0SMkM0NSYmOCs8IVouHwU3SD0vElNURUk//EABsBAAEFAQEAAAAAAAAAAAAAAAQAAQIDBQYH/8QAOBEAAQMCAwUHAgQFBQAAAAAAAQACAwQRBSExEjJBUXEGEyJhgZGxFKE0weHwIzNCctEVFiRSgv/aAAwDAQACEQMRAD8A3GhQoUkkKFChSSQoUKFJJChQoUkkKFCivSSujoUVCkkjoUV6ImkkuqFJtIBvIHfTWXakK+tNEO11H30k4BOgT6hULLwowa78TH3MD5U0m4cYJf1pPsox+6o7beaubTTO0YfYqy0Kp0vpDwo3JM3YijzYUzk9I6fRw7/zMo8iaj30fNXNw6qdpGVfaFZxL6RpNy4dO+Q+QFM5fSDiz6qwr/Kx/uqJqI+avbg1Yf6fuFqV6F6yKXhnjW/WqPZRfvvTSThJjG34mTusPIVA1LEQ3AKk6kD1Wz3rh5lG9gO8ViEu0Z29aeU9sj/jTZmJ3kntJPnUPqxwCvb2ckOrx7ErbptrQJ600Y7XUffTU8JsHe3ymK/tDzrGeLHQK6tTfVnkr29nG8ZD7LdoMQri6srDpBBFLVgsMzIbxuyHpVivkRU3guGGMi/Whx0SLf3gg++ptqmnXJCS9n5m7jgfstgoVn2C9I24TYc9sbA/5Wt51YcHwvwklvyoQ9EnI97ae+rmytdoVlTUNRDvsPz8KwUKTjYHUG43g9NFViFSl6F6qXpI23NhMKssDBWMqqSVDckqxOh7BVGl4UY0wcfNiJIxe2UKuoNrMMqggb9OqmcSBeynC1ssmwXAdVst6IuBzisMi27LKLrinfqEjX+zcH3UjI5PrMzdpJ86GfU7JsWlbkWBGQXErSPJbhLtGJfWlQdrAUzk4S4Rd+Ji+0D5Vi+QdFdAddVmrPJFt7ON/qk+y1qXhvgl/XX7Ec/dTOT0hYUbllbsS3mazECjNRNU/kFe3s9TjVzj7LQpfSPH9DDyHtZB5E0zl9I0h9XDKO2QnyWqSKFqb6iTmr24HRt1BPUq2S+kDEn1UiX+Vj94ppJw2xh/WKvsoP7iar1q5aVRvYeIqBmeeKvbhdG3SMfKnY9u42Vsq4hr2J3qmg6NNewa0mvyuW5+USNbeONdTbnOQ2JHYKgWxMfO6+NEccg+mT1ANTCXmT7pzQZ/wmtH/n9/kpx9luRdpswO7lZgT0G7Ag9thSS7MjBGZwL31zAW6iCPv76gzj06Cf8AfWa5baP7h7yPwpjI3kpNoZ/+3s0BT/yWAXvLpzc/cQp099cniRuOY+y4BHPvJt4HuqAO0T+z7yfwpviNtZfWZF8/C9Jrwd1qk6icwXkkI6kBWn5ThwLZGJ/aypcdFuYd4ND5dHYgQjUWuSLjrGmh93VVBxPC62i3buAHleo+bhBiX3OUHV+NXtZK7hZY9RWUEGry4+RK0aV7qFEQFtc9uUerQAW7qau6j1mUdrAedZtLnf13d/aYn76btCOgVb9LfMlAf7kazwxR5eZWjybUgXfPEP5gfKm0nCTCj9eD7Kuf7az0p0UmyVP6NvEqB7SVB0aB7q/Pwsww3F27E/7iK5PC2I7opD2lV/GqTFHTlDRDaGO2YVTcdq3m219lbRwmvuh8X/BaH+POdyIPtH76rcRp6jVL6aIaBFMxCd+ripobWlP7I/kH33pSLaEnO3gAPIVEo1LJJVTo2AaIxk7zqVMnEMw9dvE1X9qHffXtJPMempFZ7VEY+e9+/wAqFlbbRFtfdq9QcHVthcP9TF8C0KPYHzWD6mL4BQosDJcUdSql6ZB+Yp9enwvWYbU2jxmGcBiVuiKpGuZVLyMerVR31p/pk+Yp9enwvWTY6K2GTTcunUClz8I8KnsiwPmhmvImc0cQPlVdxz21pxBt7ER7nzD9lxm9+/303c0zkNaDmNc3xBWslkjN2OI6K47H4RCZWzR5WXLfKbg3v06jd108/wAU6E8W/wBKqnBPdN/0/wC+ppa5ipaGSENXpGBk1NKHym5ufsn52m3MqjxNcHHv1eFNRVmXZOEw6r8seUzMofiIVUFFYXUOzaZjroD+JqY1zvRHVM8NOQC0ku0AFyf3xUCcW/7R934Um0rH6TeJq6YTYGEfF4NEjk4meB5SkjXa4BIvY6erzGrNt/gBhXhbiI+KkVSykE2YgXysCdQenmq4UrzodFmPx+ljc1pYQD5aZ2WQlr76KgaMULZdGLaoWorUdCknRVHbY2qYSAFBJF7n8KkSarnC71k9n76vp2h0lisbHZ5IKQvjNjcJjPtiVvpWHQNKYM5O80nSsCXNq1mtAyC85lqJJDtSOJ6lOsFh761JLFSuFhsKWKVa1qxpZtpyalKRdKeutIMtSDUzXJkyUmVp24pB6lsohrskSiu0Nc3og1XcFbEfEncTU6Rqj42pyj1ArVicnqvSoemayV1xtUPC0I5E7ebSorESXvSs8+lM5G0NBSaorvPCvXPB/wCawfUxfAKFDYPzaD6mL4FoUTZcwVUvTGPzJB04iP4XtWOTbQEseUJpHcZ78ksFy8nnOl+rtrW/TmP/AE0fXx+T1iuCcmJR/CGnNuqYOQCp2PGXdFGzhlAJjOUi4ZTc96/+KaM6ncwPUdD4H7r0/knsnWB2a7taOSCLi4bq2dvWYEEi5GUWI1AB5iOe96tbK4X5BTcBkOa74J7pv+n/AHVNLUdsLC8W+IS+a3F2NrXBzEG3fUkgrDq/5hXo/ZxtqMA83fKdbNF5YweeSMd2dau2I2lgosTtAYqLPI0jCPkZsy5LZAbWQ3G825uiqTsr9NF9ZH/USpHhl8/xX1xqMbyxlxz/ACVlbSNqqsRuJHgvl5OCtvB0fnWy7/8A1H+F6u2G23h5nmhimV5IwwdRfTSxsdzWOml7GqVsD53sr/lJPJqsGweBkeEkmnWR3LK6qGAGRWOYgkesbga9XbWg0nhp+i4yrEZ3ybgeG3E7ZWLsdT3+dHQY/f50KyDqvS4dxvQfCFFQoUytRWqA4TwlpEA/Z++p+9NJ0vN2R/3CjKFu1MAub7VP2MOc7kQq0myWNSGC2QRrUuVp1gxW+IAF5FLWvLUw4gikmFTmIiBFREwsaTo9nRDRybabOKQel3pvJTAItibyU1kpzIaayVKyLjXGaiU6/hXLGnWxAGxEYN/XB06V5Q94HjUC+zboqNuYVk2bwDxr6uiwL0ysoJ7EBLe6n+J4BTot454pSPogFT3E6eVWuPGu88sbRsFTLZzvYnfzm4p0kim4UqbGxsQbHoNtxrLkrZL6LqIMNi2c3G/sshnVkYqylWG8HwNJmervw62bnheYAFospbpyEhc3WNQD2J0Gs7MlECbvG3QUjTDIWO4fCXaSuXbQ0gGoM2hqki5UjLkvY2wfm0H1MXwChQ2D82g+pi+AUKvCx1RvTs1tmj/mI/hesc2bHZE6lUeFbf6YcLxmBUXAtPGddxsr6VjCroeSbLoSASo7bDQUtoWsVB0UriNgXuRfmovhdh3SeUsjKrNyWI5LC3Tu6aQxN+LwvRm92YVpUWJDi6lXXuIPUarW0+C5YJxUgsjFgkgsdTfKHGhtrbQc3bVEVQ0tc05FESwuEjT5phgV5c5sQLRDXmNiSD163pyKUiwsiLIzpkDSoFBIJICW5rjLoefmrhKz6g3evQ8CP/F9T8pSGQqwZd62YdqkEe8VbNo4TC4xziUxsOHaSzSxzaMklhfLqLg2/wBagRszkxMXW0ninJLcoHu6jmFc/J4wsTmQsSVzpuZFO/Xo3a9Nx0GkxrgCCBbzTVj45XtkieQ4XFwL35gg9MjzVuh2th8PisE3HLLHh8O8byIDbMbgWGu+nvCr0hxvE0WGD5nBUyMuUKDocoOpaqNxMbxuI0dpc9o1USP+T01OUWvv30+XDoxM0eHl4qMOJCUzhXsdbMdRoLg+r3VeJH2IGV+vRZLqKka5rnhzi3KxsAeOfUnLmoC3RR1KzAiKSPibZHDPcqQiyMGi5sxewyixtYm4vUVehHN2TZdTS1HfA5WsfI+fDqioUdCoItcmkUW8x+r/ALhSxo8Et52+qHxijsOzqAuV7ZG2FSHzHykpFpXCV1iktSEDa109s141vNyT5zUXjF1p9I1NnjaQ2RWc9CqWPgBSc3LNKFpByUY5pvJUnNs50/StHEOmSRAfsAl/8tITYBTCZY545MrqjIFZW5QJV1DAFl5J8KH2m81rMhdyUTIaavTmSmsrAUiiGJGZqdbAP5xH7R8jQwWxsTOfyMEsg6VRiO9rWFSsPBjEQPHJMqJaVORxkbSWzDXIhJAHOTahJDdGxjxBahtLEKDxRkCSSAqnTmINj51XsAsmF46WQRmSQZhGpyJliXU3PP5kinu2tlEzfKDI3FoeNMYH0lS1w1+gedN4ZExjSxTKjrE6lHQnKcygkX5yNx6eisvIDm3j1XUPDnPscn57PK3mltpYkS4LEyLcB8KTY83KU69491ZGGrX9sRhcJilGgGFIA/mWsdvV9Nmw9Vn4v4Zx/aEqGo2OhpEGuidKv2Vnd5kvZuwfm0H1MXwLQocH/muH+pi/prQqSHVX9LcbNglC7/lEZ8A+lZEu0EgfPylJGdraELyUuBzm/N0VrnpaJGDQg7sRHfss16w/bLl3SIm+Z85O+yLvXdoL28KsY24JKokeQ4NHFSeJxkUmR0IRyzXkXkkqWNr2399PxPIsYfjElGRWIbkPqLnKV5LdlhUKuwnW5jyumXjGRSQ0PqtY3ABBDg8km3dUxCEbBlSAPyWnaBoe29qoMbTwRral41zHn+7pDFz501V1OZdGFhub1W3MOymCU+mxGZApNyGW/g2tMUrLqG7L7L0HAHbdG0gWzKskeDQ4YSLHkZYxI7yQNaUhgSIsTfLytwS3TUnjjhY0cxmPjEV5493KOJEiJEBzmMCM27apmc2AuSBuFzYdg3Cue+nE9hoof6K97rvkOpOXn1Vn/wAZVJDxcrKhwSRckkDjhFlANvpBjvplPiopIYw0kiSRxSR8WoJVmdieM4y9hfNyr6m2lQlCm79yIGDxCxBNxblwFuXFWHaPCLjVliK/k3EWWyorgxDUs1rte3Pe1V6hTrDbPkcZlXkg2LsyogPQWcgd1Qc50h5oiKGnoWHPZHmeNrJvQpxMuHT9JiY/ZiV5W7NwX30ym29hUvkhmlPTLIsa/Zj5X+arRSSFBz9oKKPR210ShHTTzY2CkaZmEbleKAz5Wy+uDq1rCq+3CnEE/kY4Yj0xQ5nH/UfMw7qZYsY2f9LJK4/iSm32b6eFG0sBhkDyVy2OYyzEaZ1M1pAdbPjl5K3bSEKX4zFQR9Iz8Y3ckWb3kVCT7bwSHknETHqVIV8WzN7hUImxOdnA6lB8zTjD7GU+qjvrqdT5C1aDqiQrlIqGFg59UtNwwbdFhoU62DTN/nNvdTHFbYxs4ytLKV/ZHIT7K2FSSbMYfRRO0i/gtz4138iH0nJ6lXTxYjyqpznHUolsbW6BVaWEqbG26/NV/wCDvA2Ro0kxD8SpCssYW8jWBsSDog1vrruocFtjwyYjjGTOIlDctrgtf8mMoAG+5N73C1dmYkknUk3JPPR1HSd4dp2ixsWxN0B7uLeOpVc2jwbwUMRcxyvqBdpLHXoC2t31HptZY/0GFw0B/aEQkf8A/SXMameEMOWCRsztmZNGa4XlblHNVOd6atGy4C1ldhMjpIi5zr5p7j9sTy/pJ5HHQWNvsjSo1Tyl9pfiFGTXEZ5S+2vxCgTxWu3eC1aTnpjh4I0uECjXULa3gKQ4QbXWAa86s2hIJtZbXGo1N9OYW56oewNpucQJFGVWOQgbrWOlurQ9VZn05LC+66l+ItZUCLZ5C/VX7aeGeWLERRjM7wZEUfSZnUKBfnJ0rFpYypKkEEEggixBBsQQdxrXto7QMSGVTYji7dvGBvuqrek/CI0sWOjACYtMzgDdOlhLu0Ga6t2lqIpNz1WdjgtUAeQVIFdcxrkV0Boa0GMyWNdezeD/AM1w/wBRF/TWhRcHfmuH+oh/prQqhJU/01sRs9SN/wAoi9wcjyrDcHiRNNJJuOVVCneFG/3+dbl6bf8A24f8xH8L1h77LcsJYBZkKh77hu1PcbnqNOHWyUCwE34q+7JxNjZxdQgiFhzOI/W6Rd6pcMzplgc5lK2jbnbT1GPSN3XpVx2XtSNVEoU8pCGykMM2VcvYLDf5a1SNuQ/oYxvLlgQCSFQant/CnOl1MC5AHFO9mE8Wb7xk7RoxtSqUqsqkMBfTitCLG1nAv1i1u6kk3Vj1J/iXXo3Z5pbSBp4E/K6oUVHVC3kKFFQpkkKZ7UYWW/MCafwKCwvuvr509aKPfxSE7uUM9u5rj3VoULDcuXIdq6hoYyHje/poo3BbDV0RyzNmUNlUW7r63px/gsa7ol7XYE+BN+4U+kxBtlubdF7Dw3Ugz1pLiEmcMP27ewhPxZaSaKP9knrLfcoFvGu3frpFjSSQMgG5VHYoJ8WuT40nLiCd5J7Tfz5qSZuvt1rhmpZJ0bPSEj105pu7UrJK18DWCwzuf2xc89kUn+41GcKuEOojiZgy8ospsMwF+SOYDd189THBOC2GOYfpGLn2Wug8Qt++oXH8EcpJV7qTrcHPYHRbk2HNew1o90Ur4WbGgWFHPBHVy99rcWvytwUljceZsAJCBmbiye02ueqqoWqy7Sw+TBsOtLfaFVXEXAsN97b/ACPdVdbfbbfkisK2e7cW6bRSrGuIzy19tPiFRUqnMrDTKekne9tL76kYzy0H7y9nrD30CQtZm8FonCTY6YlLMbFSSrAE2vvBFxcHTn5qgMDsQxMLtmtoLDKAOpb7zrqfvqX4TbaaAxqkecyMQSb2UAjo59fdT8i4BtvrIe6RrAOBXZwMppKgu2fG22arvCt8sAHSy/fTHENx+ypUOrQOky9QJ4t/c1/5eqnXDs2gB/fX76Z8DeWzwHdLG8dvaUgedHUf8v1WFjpvVegVFFKc1FauhuNa8Q8KxCvZPB35ph/qIf6a0KLg580w/wBRD/TWhWepqq+mGLNgALZjx6WXpNnA95qh4fD8TxrvYZuXYaW5IuNeytB9KrsMLEUXMflMWl7czHU827fWTcJtp5kIIaNxe6HW9wbWYaGkSptjLhcfqmn+LRRS3VMisOUc1gWAOXlDn0+kNSTuvTfEuZJ5niIfiwkcR5nDWMjAH93N3GmiYdXVg2oy7uvmotibTjggkRrh7Fl589xYa81tKi85KdOxpk8WVkts2QNLPl9VWjUd2b/WnS1G8GUtG995ZL9vKOvjUmm6s2pFpF6D2fdtUgdzLvlHR0VHQy3UVAihQpJ13DvHf5GnF+em8e8d/kaN5K1KDcK4HtZ+JZ/alXb/AHekXeiZ6RdqPXLLjG4gheTbMzBVvuBPOemwBNRJIvdZnlBjnBzNpdVG5eb1qebQfWL60fC1M8TCqFVQWHFznvKrz89QJUlC7JkKypbnNj1g81WdzUFDxQMGT17gvv8Af39FTDGkEkTGkJXsDXTNSNsxC9JA8Tb76e+aS0TYmgdP2FhTvEKk+8mmm2ducVPFAEzZyMx6ATYAdfP3Vxg8Q4TGPGuZxJyV/kA3c9hzdVc7LxBeFPlBVcQ2dYmcDNr6vZWvFIRC1oNiuYqIGmqklcLjS3G5GvQJfhSLYZ/aT4hVCc8kajSx1OmnWasEuCmiwkwla5aRGGt9xAJv11WplJ3G3dQVa4ucCRY20WphcbY4i1rrgHVItGCwZjuN7AG28Ea94pxA35RD++nb6w91JmIdfb4/jXWH0aMfxE+IUEdFqN3h1WszqDvAOvOL2rkilJN5pvPJYdfN/vorEK9CYOSq3pBf8gB/EHuUn7xVe4N4vJLG3QRQ4YbTEsmRTdUB16W+keyovZ8tiK1qZpawXXHYvK2WpJZoLD2TvhXhRHjJ1G7jCw7HAkHuaosbtxrQ9pwpJxUpRSzRKCSN5UlfK1NiAAbBRqd2nlUnYkYrsA0WhR9nH1MTZS8AHPRejeDZ/NMP9RD/AE1oUfB/5rB9TF8AoVMZrnnCxIUN6QmIwtwbEOD3BWJHgDWX7MRjKW0KSxsbWBB5Qyg9OhHhWielVyMGhH/HQeKuPHWsz2anFYh1zk5suUHQcoZmAtocpCgaDQjfao7VrjmrY23sQcwi2nsCLMCn5Im3q+rckAcknS9zuqqbR2VlOVuVka2Ybr8/XV42lmEkenrEZeuzA6eA99VnbqG0wH/EPxUFG520eS1mRslYS8XsPVMtkD9LpblJbwanabqWVeQTbW6eTUim6qKg3euwwSIR0waNM0dHQoqoWwhQoUKZOjH3Hyrh2rpt3j5U3LVqUG6VwXav8Qz+3812z0kz0mz1wz0cuWSOPOitYkK4Y210sQfP3U0xOIWR+Sb2jlFwDvIFqX+UnWynS47SLed6SmxBA3garpusPpbzbnHjTJ0w2ZgmDB2FgNdd5P3VKM9NXxHS435ha/qC+nb1UIpN+t9f989MklpGo8DrLEOmRPiFIO1KbNf8tH7YPhrUklduCklxiD/H/tFDbGxo3mXEvJkCZc17W5J015uam/AdrxTn+P8A2ipnH4VZY2iYkBrXI36EHn7K2oWB1M3K/LquPq5jFXOINhoSOVs1GcKJVbBs6kMCUsRuPKA0qiE1eOEeHEWBMa3IUqBe1/Wv0ddUNjQFdfvBfWy2sI2e5ds6bRsus1DD6ugG/Olu3MLVwTXeB/TRfWxjxYUEVrA2zV2/xiVgGGVb69P+91Re2XkaJ+Wb2uLabt4036XpdYmRQrKVI0IYEEak6g9RFGvX2ViudsSZcCvSoKVs9GCdXN+5CoMI1PYaEDWNScmB4t3B3a2PaNKi5t9bLTcXC84kY5jy12oyWg4eXNhoT0cYPI1w/wB9NtjteBB1sfH/AMU5fm7ax6mxlNl6RggP0Ed+S9G8H/msH1MXwChQ4P8AzXD/AFMXwChWs3QLzeTfPVV30mR5ocOvM2Liv2BXb+2svne2PVSBoWH2Q2XyFazw+iJjgPMuJVj2cXIPMivPU+0pExEjXzFZZQM2tgWZSAw13E9NSuCNki6gCQbg2U/tmdpJUVXYxlgzEnLxecqv5PX1gC2ulMceAI5ACSATZjvOu80eE2rHIki6iUxniwRexUrIbEdSNvoxFxiFRoWv3c58qFc52QctmjY2zy08Et9A9qeTU3TdThWvHfrTyam6bqBn3yu4wn8OPVdUVChVK1EKOioUySJzoe/ypgZKeYg8huw1EGb/AH0Vp0O4eq4LtX+Jj6fmlJHpNpKRaSks9HXXLLlwxzam973N+sEb7bidRbdXAjNtSL2YHvIt7gK7L1wz0yQRsp15Wh3jpNrXv3CiUAXt21wXoi9JK6UL0MLJaRGO4OvhfWm5auWN6e4Ug0nRXfgHOL4mE7w4cde9W8l8atJrK4sdJHKk8YIcaMCNCbWPaCKuEHC1WW7ROrdFifeBWlSVkbWbLjay53E8IqJJu8iaTe1xbj+qecLz+aP7SfEKzy9Wnbe2mniaJYyLkG56jfnPVVbXASnoFCVtRE6S7XArZwfC6tkGy6M3ueCTpTANaaIncJYiewOCe2lV2S3O/gKXh2SAQSzEg3HNqKAdUxjittmD1b/6beqtu3cSsuIkkUkqxFrix0UDdzbqYUEOmpueugRWRIbuJC9HpIzFAxh1ACZbUwAkFwbON3WOjqqtR7LcvlItrqTVvnuBuI7qSiw5b1RmP7oY+VXw1DmiwWJiWEU803eE2PHzSuHQIoQbgK6f7xUnguDuLccnCzHtjK/FapbD+j7HyacSqdbyKPhuaq7uRxvYrR+vo4Iw3vGgAaX/AMLZODvzXD/URfAKFK7JwxjhjjO9I0U23XVQDbwoVtDReYvN3EqD4fvbDof4y/C1eb8XIFxDN/Fdj9tq9McM9lyYiAJGAWDh7E2uACND061jm3uCiFjxsbxSnXNqCTu59GHZpVJcGOJKcC7fNVDg+pfFIq2u3HZRewuYZOepPD5onjRxlbMysDvBsdDXWyOD0uHxUUmZXjUvdhowvG6i68+pG6uNuy/nN+iTN3aCmcQ9wtyR9JIY2Ov5fNk5iP5M6g2e1xuNi4pFd1KQIqo6ruWRQL79VJN/Gk13VnT767zBvwzR1R0dFR1StZFR0KFJOuJXZVLISGAJUjQg8xHXVcM1yTe5JJJ1uSTck9OtWSQXBpqIu2ioJ+7BFlzmMYT9bK121awsoI3O5G8PxoxhnPNbvqd4uhxR6DVhrXckA3szFxcf36KFGBf90eJrv/DT+14Cpni+bUnoGpp/hth4h/Uw8rdkb/hUfqZDorv9Foot/wC5VaXZY5yT3/hSqbOTo8b1dcJwEx77sKwHS7Io8M1/dUthfRdjG9Ywp2szeS0rzu4FNbCodXN+fhZ0mDUblHgKU+TjorVsN6JT+sxf2I7e9mPlUthvRZhBbO8z96KD9lQffS7iZ2vyonFsNj3QT0asSEB6DSuS3OPfW/YXgBs9P/jhvbZ3+ImpbDbCwsf6PDQr2RoD42qf0jjqUMe0UDdyMnrb8rrzlDs+R/Ujkf2VdvIVKYbgjjn9XCTfzIU+IivRCRgbgB2CurVYKQDUoV/aSU7rAPf9FhuG9GmPbesae3L/ANqmpbCeiWY/pMTGPZRn97EeVa9ahapimj4hCPx2tdo4DoFnOH9FMP08RKfZEa+ampbDejjArvjd/akY+4Wq40KmIYxoAhZMTrJN6V3uoPCcFcHHqmEhB6TGpP2iL1Kw4VF0VFUdQA8qXoVZYDRBue528borULUdClZRRWoUdCnSQpti8IkilZEV16GAI/0pzQpJKlbV4Bo12gcof2Guydx3r76yHhlsDE4aVpJYCAcyh96WNiCHGgNwNDY16StScsIYEMAQd4IBB7QagIwHXCtZKQC05grzXEfyZa1rshI6Dle9uo0korbcf6O8C7ZgjRC9ysbZVJ1+jY2381qUw/o8wC/qc/tux++hJKVznXByXVUXaCnp4Awtdccrf5WH3pSKJnNkUuehVdvIV6CwvBzCR+phoV7I1/CpKOBQLBQB1ACmFFzP2TydrCdyL3K8+4bg1jJPVwsp7UK/FapPD+j3Hv8AqkT25F/tvW52oWqwUbOKCk7T1Z3Q0ehPyVkOH9FWJPrzxJ2Kz/8AbUpg/RPGP0mJdvYjRR78x99aVahapimiHBAyY3XSayEdMlScP6MsAPWWSTtkZfgIqWwvAzAR+rhY79JGY+LE1YLUdWiNg0CCkq6iTfe4+pTTD4GNNEjRfZUDyp1ajoVND3PFFajoUKSSFFajoUkkKFChSSQoUKFJJChQoUkkKFChSSQoUKFJJChQoUkkKFChSSX/2Q==" alt="">
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-title text-gray-600 font-bold text-sm">
+                                Nintendo Switch (2021)
+                            </div>
+                            <div class="cart-item-brand text-gray-400 text-sm">
+                                Nintendo
+                            </div>
+                        </div>
+                        <div class="cart-item-counter w-48 flex items-center">
+                            <div class="chevron-left cursor-pointer text-gray-400 bg-gray-100 rounded h-6 w-6 flex justify-center items-center hover:bg-gray-200">
+                                <i class="fas fa-chevron-left fa-xs"></i>
+                            </div>
+                            <h4 class="text-gray-400 mx-2">x1</h4>
+                            <div class="chevron-right cursor-pointer text-gray-400 bg-gray-100 rounded h-6 w-6 flex justify-center items-center hover:bg-gray-200">
+                                <i class="fas fa-chevron-right fa-xs"></i>
+                            </div>
+                        </div>
+                        <div class="cart-item-total-cost w-48 fpnt-bold text-gray-400">
+                            ₹21,000.00
+                        </div>
+                        <div class="cart-item-delete w-10 font-bold text-gray-300
+                        cursor-pointer hover:text-gray-400">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
